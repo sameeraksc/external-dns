@@ -86,7 +86,7 @@ SOURCES        = $(shell find . -name '*.go')
 IMAGE_STAGING  = gcr.io/k8s-staging-external-dns/$(BINARY)
 REGISTRY      ?= us.gcr.io/k8s-artifacts-prod/external-dns
 IMAGE         ?= $(REGISTRY)/$(BINARY)
-VERSION       ?= $(shell git describe --tags --always --dirty --match "v*")
+VERSION       ?= v0.14.1
 BUILD_FLAGS   ?= -v
 LDFLAGS       ?= -X sigs.k8s.io/external-dns/pkg/apis/externaldns.Version=$(VERSION) -w -s
 ARCH          ?= amd64
